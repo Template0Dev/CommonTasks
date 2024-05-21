@@ -16,7 +16,7 @@ std::vector<std::pair<double, double>> InputFunctionValues()
     double previousSecondNum = std::numeric_limits<double>::infinity();
 
     std::string input;
-    std::cout << "Enter numbers in the format {Num1}-{Num2}, or a single {Num1} to finish." << std::endl;
+    std::cout << "Enter numbers in the format {Num1}/{Num2}, or a single {Num1} to finish." << std::endl;
 
     while (true) {
         std::getline(std::cin, input);
@@ -33,7 +33,7 @@ std::vector<std::pair<double, double>> InputFunctionValues()
             break;
         }
 
-        size_t dashPos = input.find('-');
+        size_t dashPos = input.find('/');
         if (dashPos != std::string::npos) 
         {
             try 
